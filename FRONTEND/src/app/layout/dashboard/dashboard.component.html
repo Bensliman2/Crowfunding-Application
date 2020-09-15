@@ -1,0 +1,43 @@
+<div [@routerTransition]>
+    <h2 class="text-muted">Top 3 Trending Projects</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <ngb-carousel>
+                <ng-template ngbSlide *ngFor="let slider of sliders">
+                    <img class="img-fluid mx-auto d-block" [src]="slider.imagePath" alt="Random first slide" width="100%">
+                    <div class="carousel-caption">
+                        <h3>{{slider.label}}</h3>
+                        <p>{{slider.text}}</p>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+    <hr>
+    <h2 class="text-muted">Categories</h2>
+    <div class="row">
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'dark'" [icon]="'assets/images/lol.png'"  [label]="'Category 1'" ></app-stat>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'warning'" [icon]="'assets/images/cod.png'"  [label]="'Category 2'" ></app-stat>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'danger'" [icon]="'assets/images/fifa.png'"  [label]="'Category 3'" ></app-stat>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'info'" [icon]="'assets/images/Fortnite.png'"  [label]="'Category 4'"></app-stat>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card card-default">
+                <div class="card-header">
+                    <h2 class="text-muted">Top Liked Projects</h2>
+                </div>
+                <app-timeline></app-timeline>
+            </div>
+        </div>
+    </div>
+</div>

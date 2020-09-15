@@ -1,0 +1,51 @@
+<div [@routerTransition]>
+<div class="jumbotron">
+  <h1>Support our project!</h1>
+  <p>
+      If you like our project, your support by liking it would be very useful and a small donation too!
+  </p>
+
+  <table class="card-body table table-hover">
+    <tbody>
+      <tr [routerLink]="['/projectpage']">
+        <td>Project1</td>
+        <td>Owner1</td>
+        <td><p><b>25Dh</b> out of 100Dh</p>
+            <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div></td>
+    </tr>
+    </tbody>
+</table>
+
+<form role="form">
+  <div class="form-group input-group">
+      <input type="number" class="form-control" placeholder="Donation">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">MAD</span>
+    </div>
+  </div>
+</form>
+<p>
+  <button class="button button-like" (click)="toggle()">
+    <i class="fa fa-heart"></i>
+    <span>Like</span>
+  </button>
+</p>
+  <p style="text-align:center">
+      <a href="javascript:void(0)" class="btn btn-warning btn-lg" >Donate</a>
+  </p>
+</div>
+</div>
+
+<!-- <script>
+$(document).foundation();
+
+$(function() {
+  $('.button-like')
+    .bind('click', function(event) {
+      $(".button-like").toggleClass("liked");
+    })
+});
+
+</script> -->

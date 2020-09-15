@@ -1,0 +1,50 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
+    <div class="list-group">
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-home"></i>&nbsp;
+            <span>{{ 'HomePage' | translate }}</span>
+        </a>
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('pages')">
+                <i class="fa fa-tasks"></i>&nbsp;
+                <span>{{ 'Projects' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'pages'">
+                <ul class="submenu">
+                    <li>
+                        <a routerLink="/allprojects" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                            <span>{{ 'All Projects' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/newest" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                            <span>{{ 'Newest' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/topliked" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                            <span>{{ 'Top Liked' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/topdonated" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                            <span>{{ 'Top Donated' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+        <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-gamepad"></i>&nbsp;
+            <span>{{ 'Categories' | translate }}</span>
+        </a>
+
+        <a routerLink="/createproject" class= "create" ><i class="fa fa-plus"></i>&nbsp;
+        Create A New Project</a>
+        </div>
+   
+    <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
+        <i class="fa fa-fw fa-angle-double-{{collapsed?'right':'left'}}"></i>&nbsp;
+        <span>{{ 'Collapse Sidebar' | translate }}</span>
+    </div>
+</nav>

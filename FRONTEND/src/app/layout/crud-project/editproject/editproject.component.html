@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Edit Your Project</h1>
+  <form>
+    <div class="form-group">
+      <label for="image">Project Picture</label>
+      <input
+       type="file" class="form-control" id="profilepic" (change)="onFileChanged($event)" #fileInput>
+       <button type="submit" class="btn btn-warning" (click)="onUpload()">Upload Picture</button> 
+    </div>
+
+    <div class="form-group">
+      <label for="name">Project Name</label>
+      <input type="text" class="form-control" id="name" placeholder ="Name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Category</label>
+      <select class="form-control" id="cat">
+        <!-- <option *ngFor="let cat of categories" [value]="cat">CAT1</option> -->
+        <option>League Of Legends</option>
+        <option>Call Of Duty</option>
+        <option>FIFA</option>
+        <option>Fortnite</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="description">About the project</label>
+      <input type="text" class="form-control" id="description" placeholder ="Description">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Money to Raise in MAD (Dh)</label>
+      <input type="number" class="form-control" id="money" placeholder ="Money to raise">
+    </div>
+    
+    <button type="submit" class="btn btn-success">Save</button>
+
+  </form>
+</div>
+

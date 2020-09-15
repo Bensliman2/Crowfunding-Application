@@ -1,0 +1,36 @@
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<div [@routerTransition]>
+    <div class="card mb-3">
+      <div class="card-header">My Donations</div>
+      <table class="card-body table table-hover">
+          <thead>
+          <tr>
+              <th>#</th>
+              <th>Project Name</th>
+              <th>Money I Donated</th>
+              <th>Donation Date</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr [routerLink]="['/projectpage']">
+              <th scope="row">1</th>
+              <td>Project1</td>
+              <td><p><b>25Dh</b></p></td>
+            <td>02/01/2020</td>
+          </tr>
+          <tr [routerLink]="['/projectpage']">
+              <th scope="row">2</th>
+              <td>Project2</td>
+              <td><p><b>10Dh</b></p></td>
+          <td>15/11/209</td>
+          </tr>
+          <tr [routerLink]="['/projectpage']">
+              <th scope="row">3</th>
+              <td>Project3</td>
+              <td><p><b>2Dh</b></p></td>
+          <td>21/12/2019</td>
+          </tr>
+          </tbody>
+      </table>
+    </div>
+    </div>

@@ -1,0 +1,48 @@
+<div [@routerTransition]>
+  <div class="card mb-3">
+    <div class="card-header">Sorted By Date</div>
+    <table class="card-body table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Project Name</th>
+            <th>Owner</th>
+            <th>Money to raise</th>
+            <th>Created On</th> 
+        </tr>
+        </thead>
+        <tbody>
+        <tr [routerLink]="['/projectpage']">
+            <th scope="row">1</th>
+            <td>Project1</td>
+            <td>Owner1</td>
+            <td><p><b>25Dh</b> out of 100Dh</p>
+                <div class="progress">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div></td>
+          <td>01/01/2020</td>
+        </tr>
+        <tr [routerLink]="['/projectpage']">
+            <th scope="row">2</th>
+            <td>Project2</td>
+            <td>Owner2</td>
+            <td><p><b>10Dh</b> out of 100Dh</p>
+              <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+        </div></td>
+        <td>14/12/2019</td>
+        </tr>
+        <tr [routerLink]="['/projectpage']">
+            <th scope="row">3</th>
+            <td>Project3</td>
+            <td>Owner3</td>
+            <td><p><b>2Dh</b> out of 100Dh</p>
+              <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 2%" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"></div>
+        </div></td>
+        <td>01/11/2019</td>
+        </tr>
+        </tbody>
+    </table>
+  </div>
+  </div>
